@@ -49,7 +49,7 @@ Ubuntu 22.04 Docker Installation
 
     .. code-block:: bash
 
-        sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+        sudo apt-get install docker-ce docker-ce-cli docker-compose containerd.io -y
 
 
 8. Verify Docker installation:
