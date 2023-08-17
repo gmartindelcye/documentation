@@ -2,29 +2,28 @@ Ubuntu 22.04 Docker Installation
 ================================
 
 1. Update Ubuntu software packages:
-```
+
     .. code-block:: bash
 
         sudo apt-get update
     ```
 
 2. Install neccessary packages:
-```
+
     .. code-block:: bash
 
         sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release  software-properties-common -y
 
 
-```
 3. Add Docker GPG key:
-```
+
     .. code-block:: bash
 
         curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-```
+
 4. Add Docker repository:
-```
+
     .. code-block:: bash
 
         echo \
@@ -33,12 +32,12 @@ Ubuntu 22.04 Docker Installation
 
     
 5. Update Ubuntu software packages:
-```
+
     .. code-block:: bash
 
         sudo apt-get update
 
-    
+
 6. Establish docker version:
 
     .. code-block:: bash
@@ -60,6 +59,9 @@ Ubuntu 22.04 Docker Installation
         sudo systemctl status docker
 
 
+    Press ``q`` to exit the status screen.
+
+
 9. Enable Docker to start on boot:
 
     .. code-block:: bash
@@ -72,6 +74,13 @@ Ubuntu 22.04 Docker Installation
     .. code-block:: bash
 
         sudo usermod -aG docker $USER
+
+
+11. Re-log to apply the group changes.:
+
+    .. code-block:: bash
+
+        exec su -l $USER
 
 
 11. Verify Docker version:
