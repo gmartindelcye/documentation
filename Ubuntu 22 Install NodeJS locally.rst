@@ -51,5 +51,3 @@ Other commands
 
        nvm run <version> <script>   
 
-    
-         nvm ls
